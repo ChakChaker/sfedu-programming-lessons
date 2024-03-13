@@ -1,0 +1,6 @@
+print((ord("а"), ord("a")))
+print("а" == "a")
+print("а" > "a")
+print("a" < "ab")
+print("----------")
+print(True < 5)

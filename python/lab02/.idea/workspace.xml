@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77594900-0cd5-4ad1-bcad-26dbd0826bbd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/lab02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/lab02.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/1.py" beforeDir="false" afterPath="$PROJECT_DIR$/task2/1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3/2.py" beforeDir="false" afterPath="$PROJECT_DIR$/task3/2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task4/2.py" beforeDir="false" afterPath="$PROJECT_DIR$/task4/2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task5/2.py" beforeDir="false" afterPath="$PROJECT_DIR$/task5/2.py" afterDir="false" />
-    </list>
+    <list default="true" id="77594900-0cd5-4ad1-bcad-26dbd0826bbd" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
