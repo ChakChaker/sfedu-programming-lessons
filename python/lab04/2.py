@@ -40,5 +40,5 @@ print('\n 4)\n')
 
 next_day = 'После 28 февраля будет '
 year = 2016
-next_day += '1 марта' if (year % 4 == 0) and (year % 100 != 0) or (year % 400 == 0) else '29 февраля'
+next_day +=  '29 февраля'if (year % 4 == 0) and (year % 100 != 0) or (year % 400 == 0) else '1 марта'
 print(next_day)
