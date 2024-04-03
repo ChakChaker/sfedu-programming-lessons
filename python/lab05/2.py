@@ -13,9 +13,9 @@ print('\n3)==================>')
 txt = "0123456789"
 print(txt[2:5:-1], '1)')
 print(txt[5:2:-1])
-print(txt[:2:-1])
-print(txt[::-1])
+print(txt[-1:2:-1])
+print(txt[-1::-1])
 
-print('\n3)==================>')
-txt = "доход"
+print('\n4)==================>')
+txt = "поход"
 print(True if txt == txt[::-1] else False)

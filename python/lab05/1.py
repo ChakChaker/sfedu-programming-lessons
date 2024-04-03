@@ -17,7 +17,7 @@ print('\n3)==================>')
 txt = "0123456789"
 print(txt[:4])
 print(txt[2:])
-print(txt[:])
+print(txt[2:3])
 
 print('\n4)==================>')
 txt = "987654321"
@@ -31,3 +31,4 @@ price = 3433.61
 dot = str(price).find(".")
 print(dot)
 print(f'Сумма покупки {str(price)[0:dot]} руб., скидка {str(price)[(dot + 1):]} коп.')
+print(txt[0:-1])
