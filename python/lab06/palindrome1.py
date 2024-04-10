@@ -1,5 +1,6 @@
 def get_word():
-    return input("Введите слово: ")
+    word = input("Введите слово: ")
+    return word
 
 
 def is_palindrome(word):
