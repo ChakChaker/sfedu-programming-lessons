@@ -4,17 +4,17 @@ def get_word():
 
 
 def is_palindrome(word):
-    if word == word[::-1]:
-        return "палиндром"
-    else:
-        return "не палиндром"
+    return "палиндром" if word == word[::-1] else "не палиндром"
 
 
-def create_message():
+def create_message(word, what_is):
+    print('Слово %s - %s' % (word, what_is))
+
+
+def check_palindrome():
     word = get_word()
     what_is = is_palindrome(word)
-    answer = 'Слово %s - %s' % (word, what_is)
-    print(answer)
+    create_message(word, what_is)
 
 
-create_message()
+check_palindrome()

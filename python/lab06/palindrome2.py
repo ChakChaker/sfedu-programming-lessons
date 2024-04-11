@@ -13,10 +13,13 @@ def is_palindrome():
 
 
 def create_message():
+    print('Слово %s - %s' % (word, what_is))
+
+
+def check_palindrome():
     get_word()
     is_palindrome()
-    answer = 'Слово %s - %s' % (word, what_is)
-    print(answer)
+    create_message()
 
 
-create_message()
+check_palindrome()
