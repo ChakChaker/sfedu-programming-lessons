@@ -28,11 +28,11 @@ print('Общая сумма баллов 2:', result2)
 
 
 def convert_list(ege):
-    ege2 = [[ege[0], ege[1]], [ege[2], ege[3]], [ege[4], ege[5]]]
-    # math = ege[0:2]
-    # inf = ege[2:4]
-    # rus = ege[4:6]
-    # ege2 = [math, inf, rus]
+    # ege2 = [[ege[0], ege[1]], [ege[2], ege[3]], [ege[4], ege[5]]]
+    math = ege[0:2]
+    inf = ege[2:4]
+    rus = ege[4:6]
+    ege2 = [math, inf, rus]
     return ege2
 
 

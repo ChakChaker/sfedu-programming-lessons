@@ -24,5 +24,6 @@ print("2в  ---------------------------")
 list3 = [[], []]
 print(type(list3))
 print(len(list3))
+print(id(list3))
 print(id(list3[0]))
 print(id(list3[1]))
