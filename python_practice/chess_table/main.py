@@ -1,19 +1,37 @@
-from chess_table.file import file_reader, file_saver
-from chess_table import player_storage
+import calculations
+import file_manager
+import player_storage
 
 if __name__ == "__main__":
-    file_data_frame = file_reader.get_concat_file()
-    file_data_frame['Имя'] = file_data_frame['Имя'].str.strip()
-    file_data_frame['Имя.1'] = file_data_frame['Имя.1'].str.strip()
-    file_data_frame['Результат'] = file_data_frame['Результат'].str.replace(' ', '')
-    file_saver.save_to_csv(file_data_frame)
+    # Объединение файлов, удаление пробелов в имени, сохранение файла
+    file_frame = file_manager.get_concat_file()
+    file_manager.delete_spaces(file_frame)
+    file_manager.save_to_csv(file_frame)
 
-    unique_data = file_data_frame.drop_duplicates(subset='Имя')
-    file_saver.save_to_csv(unique_data, 'output_files/Unique.csv')
+    # создание файла с уникальными именами на основе столбца Имя, сохранение этого файла
+    unique_data = file_frame.drop_duplicates(subset='Имя')
+    file_manager.save_to_csv(unique_data, 'output_files/Unique.csv')
 
-    two_columns_values = list(zip(unique_data['Ном.'], unique_data['Имя'], unique_data['Рейт']))
-    two_columns_values[0] = 4
-    print(two_columns_values[1])
+    # Перебирается уникальный фрейм, добавляется каждый игрок в список
+    for index, row in unique_data.iterrows():
+        player_storage.add_player(row["Ном."], row["Имя"], row["Рейт"])
 
-    player_storage.add_player(1, "lox", 1240)
-    player_storage.add_enemy_to_player(1, 3, "fdssf", 34, "1-0")
+    # на основе имени игрока из уникального фрейма ищутся противники и добавляются в список к каждому игроку
+    for elem in player_storage.players_list:
+        name = elem["player"]["name"]
+        for index, row in file_frame.iterrows():
+            if row["Имя"] == name:
+                player_storage.add_enemy_to_player(elem["player"]["id"], row["Ном..1"], row["Имя.1"],
+                                                   row["Рейт.1"], row["Результат"])
+            elif row["Имя.1"] == name:
+                player_storage.add_enemy_to_player(elem["player"]["id"], row["Ном."], row["Имя"],
+                                                   row["Рейт"], row["Результат"][::-1])
+                print("------------------")
+                print(row["Результат"])
+                print(row["Результат"][::-1])
+                print("------------------")
+
+    # for elem in player_storage.players_list:
+    #     calculations.calculate_score(elem)
+    #     print("----------------------")
+    calculations.calculate_score(player_storage.players_list[0])
